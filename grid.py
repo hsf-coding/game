@@ -36,12 +36,7 @@ class Grid:
         num_tiles_per_image = (num_tiles_per_image // 3) * 3
         tiles_list = [image_path for image_path in self.image_paths for _ in range(num_tiles_per_image)]
         
-        total_tiles = GRID_SIZE * GRID_SIZE * self.maxlayer
-        if len(tiles_list) < total_tiles:
-            tiles_list.extend(random.choices(self.image_paths, k=total_tiles - len(tiles_list)))
-        else:
-            tiles_list = tiles_list[:total_tiles]
-        
+  
         random.shuffle(tiles_list)
         
         self.tiles = [

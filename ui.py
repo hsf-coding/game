@@ -14,9 +14,9 @@ class UIManager:
         self.background_music = pygame.mixer.Sound("resources/music/background_music.mp3")
         self.click_sound = pygame.mixer.Sound("resources/music/click_sound.mp3")
 
-        pygame.mixer.init()  # Initialize the mixer for playing music
-        pygame.mixer.music.load(self.config.background_music)  # Load background music
-        pygame.mixer.music.play()  # Loop background music indefinitely
+        pygame.mixer.init()  
+        pygame.mixer.music.load(self.config.background_music) 
+        pygame.mixer.music.play(-1) 
 
         self.settings_visible = False
         self.sound_on = True
